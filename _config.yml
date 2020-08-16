@@ -27,7 +27,7 @@ aux_links:
 title: "Guides"
 description: IPA & GPRL guides for data management of RCTs
 baseurl: "/guides" 
-url: "https://povertyaction.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://amolraswan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
 # add plugins
