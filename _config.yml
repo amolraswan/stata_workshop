@@ -37,5 +37,3 @@ plugins:
 # Add logo
 # Need to fix proportions 
 #logo: "/assets/Combined_logo.png"
-
-theme: jekyll-theme-cayman
