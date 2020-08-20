@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Microsoft Word"
-nav_order: 3
+nav_order: 1
 has_children: false
 has_toc: false
 ---
