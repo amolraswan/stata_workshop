@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Microsoft Word"
+title: "Using Microsoft Word"
 parent: "Results"
 grand_parent: "Cleaning Guide"
 nav_order: 1
