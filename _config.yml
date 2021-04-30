@@ -26,7 +26,7 @@ aux_links:
 # Change URLs and metadata
 title: "Guides"
 description: IPA & GPRL guides for data management of RCTs 
-url: "https://amolraswan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://stata_workshop.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
 
 # add plugins
