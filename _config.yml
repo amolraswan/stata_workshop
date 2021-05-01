@@ -15,7 +15,7 @@ heading_anchors: true
 
 
 # Change URLs and metadata
-title: "Stata Workshop"
+title: ""
 description: Stata Workshop Materials
 url: "https://amolraswan.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 permalink: pretty
