@@ -8,7 +8,7 @@ has_children: false
 
 # Primer on Stata Commands
 
-### Command Structure 
+## Command Structure 
 
 Most commands in Stata follow this structure:
 
