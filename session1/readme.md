@@ -8,7 +8,7 @@ has_toc: true
 
 # Session 1
 
-We will covid19 vaccination data for India as the example dataset for today's session. It has been compiled, cleaned, and made publicly available by the [Development Data Lab](http://www.devdatalab.org/covid). I cannot emphasize enough the awesome work being done by this team, go check out the datasets they have painstakingly cleaned and linked to each other! Anyway, the dataset we will focus on is called covid_vaccination.dta [here](https://www.dropbox.com/sh/y949ncp39towulf/AADbSeZWSG1xjPHXNMTyhmoba/covid?dl=0&subfolder_nav_tracking=1).
+We will use covid19 vaccination data for India as the example dataset for today's session. It has been compiled, cleaned, and made publicly available by the [Development Data Lab](http://www.devdatalab.org/covid). I cannot emphasize enough the awesome work being done by this team, go check out the datasets they have painstakingly cleaned and linked to each other! Anyway, the dataset we will focus on is called covid_vaccination.dta [here](https://www.dropbox.com/sh/y949ncp39towulf/AADbSeZWSG1xjPHXNMTyhmoba/covid?dl=0&subfolder_nav_tracking=1).
 
 I have added a few variables to this dataset and saved a copy on [my drive](https://drive.google.com/file/d/1Sb86BVYAgiyqpg7QsBdNvfWfG9Y63UGy/view?usp=sharing). We will use this version.  
 

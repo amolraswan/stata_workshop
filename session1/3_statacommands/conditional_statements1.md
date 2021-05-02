@@ -50,7 +50,7 @@ We answer this in two steps:
 2. We want to subset for Punjab and Haryana observations in March. We *cannot* write ``if date_month == 3 & lgd_state_name == "punjab" | lgd_state_name == "haryana"`` because it is unclear if this statement means "March and Punjab, or Haryana" or "March, and Punjab or Haryana". Stata will execute the former (i.e., Punjab obs only from March while all Haryana observations) whereas we desire the latter. Similar to the BODMAS rule for basic math functions, this calls for the use of parentheses to make sure Stata does exactly what you want it to do. The correct way to write, therefore, is ``if date_month == 3 & (lgd_state_name == "punjab" | lgd_state_name == "haryana")``. Another correct way to write is ``(if date_month == 3 & lgd_state_name == "punjab") | (date_month == 3 & lgd_state_name == "haryana")``. Make sure you understand why these two are equivalent. For completeness, we would run:
 
 ```
-summarize total_covishield if date_month == 3 & (lgd_state_name == "punjab" | lgd_state_name == "Haryana")
+summarize total_covishield if date_month == 3 & (lgd_state_name == "punjab" | lgd_state_name == "haryana")
 ```
 
 Always good to sketch out a venn diagram to ensure you understand what conditional statement you need to use!
