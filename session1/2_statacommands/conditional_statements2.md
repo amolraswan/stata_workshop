@@ -14,20 +14,20 @@ So far, we have dealt with the equality condition ``==``. The expression for "le
 
 One short example: Instead of looking at the whole month of March, lets take a look at average daily covishield vaccinations at district level (all India sample) for:
 
-1. the first 15 days of March 
+- the first 15 days of March 
 
 ```
 summarize total_covishield if date_month == 3 & date_day <= 15
 ```
 
-2. between 16 and 25 March 
+- between 16 and 25 March 
 
 ```
 summarize total_covishield if date_month == 3 & (date_day >= 16 & date_day <= 25)
 summarize total_covishield if date_month == 3 & inrange(date_day, 16, 25)
 ```
 
-3. 26 through the end of March
+- 26 through the end of March
 
 ```
 summarize total_covishield if date_month == 3 & (date_day >= 26 & date_day <= 31)
