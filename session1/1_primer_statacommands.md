@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Primer on Stata Commands
-nav_order: 1
+nav_order: 2
 parent: Session 1
 has_children: false
 ---
