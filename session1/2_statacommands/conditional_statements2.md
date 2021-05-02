@@ -8,7 +8,7 @@ has_children: false
 ---
 
 
-## ``<=, <, >, >=, !=, missing()``
+## ``<=, <, >, >=, !=, missing(), inrange(), inlist()``
 
 So far, we have dealt with the equality condition ``==``. The expression for "less than or equal to" is ``<=``, "strictly less than" is ``<``, "strictly more than" is ``>``, and "more than or equal to" is ``>=``. ``!=`` stands for "not equal to".
 
@@ -39,6 +39,7 @@ summarize total_covishield if date_month == 3 & date_day >= 26 & !missing(date_d
 Lots of heavy stuff happening in #2 and #3 above. Lets unpack:
 
 - ``inrange(variable, lower value, upper value)`` is an alternative to writing ``variable <= lower value & variable >= upper value``
+- Not used in the examples but useful to know is the ``inlist()`` command. It can be used in place of multiple "or" conditions for a variable. Say, we want to look at the states of Punjab, Haryana, and Kerala. How would the conditional statement look? ``(state == "punjab" | state == "haryana" | state == "kerala")`` is lengthy and looks *uncool*. Can save time and space by using ``inlist(state,"punjab","haryana","kerala")``. 
 - In #3, since we know we need to go from March 26 to March 31 and there are no days beyond 31 (always a good idea to verify this in the data!), we can skip the ``date_day <= 31`` bit. This is what I do in the third line of the code. 
 - **Super important**: Missing values in Stata are essentially infinity, so higher in value than non-missing values. What does this mean? If there are any missing values in the date_day variable, writing just ``date_day >= 26`` will include them -> which we do not want! So, if you don't want to define the upper limit but want to exclude missing observations of the date_day variable, **always** include the ``!missing(date_day)`` bit in your code -> which is what we do in the fourth line.  
 
