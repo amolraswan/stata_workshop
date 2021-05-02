@@ -7,7 +7,7 @@ grand_parent: Session 1
 has_children: false
 ---
 
-What if we want to know the number of vaccinations done on April 2 or the average number of daily covishield vaccinations done in March in Pathankot, Punjab (which is my hometown!)? 
+What if we want to know the number of vaccinations done on April 2 or the average number of daily covishield vaccinations done in March in Jalandhar, Punjab (which is my hometown!)? 
 
 ## If qualifier
 
@@ -34,11 +34,55 @@ summarize total_covishield if date_month == 3 & lgd_state_name == "punjab", deta
 
 For completeness, let's come back to the question posed at the top. Try figuring out how you would do it. 
 
-What I'd try: First tabulate Punjab districts to check the capitalization and spelling of Pathankot and then run the actual command.
+What I'd try: First tabulate Punjab districts to check the capitalization and spelling of Jalandhar and then run the actual command.
 
 ```
 tab lgd_district_name if lgd_state_name == "punjab"
-summarize total_covishield if date_month == 3 & lgd_state_name == "punjab" & district == "pathankot", detail
+summarize total_covishield if date_month == 3 & lgd_state_name == "punjab" & district == "jalandhar", detail
 ```
 
-Lets move on to 
+What if you want to look at average daily covishield vaccinations in Punjab and Haryana districts (combined) in March?
+
+We answer this in two steps:
+
+1. Lets forget we care about March and focus on all the months. After this, we have two sets of observations we care about: Punjab observations and Haryana observations. Intersection or union of these sets? Union! That is, observations belonging to either Punjab or Haryana. Similar to "and", Stata does not understand the english word "or", instead we need to use "|". So, our if statement would like: ``if lgd_state_name == "punjab" | lgd_state_name == "haryana"`` 
+
+2. We want to subset for Punjab and Haryana observations in March. We *cannot* write ``if date_month == 3 & lgd_state_name == "punjab" | lgd_state_name == "haryana"`` because it is unclear if this statement means "March and Punjab, or Haryana" or "March, and Punjab or Haryana". Stata will execute the former (i.e., Punjab obs only from March while all Haryana observations) whereas we desire the latter. Similar to the BODMAS rule for basic math functions, this calls for the use of parantheses to make sure Stata does exactly what you want it to do. The correct way to write, therefore, is ``if date_month == 3 & (lgd_state_name == "punjab" | lgd_state_name == "haryana")``. Another correct way to write is ``(if date_month == 3 & lgd_state_name == "punjab") | (date_month == 3 & lgd_state_name == "haryana")``. Make sure you understand why these two are equivalent. For completeness, we would run:
+
+```
+summarize total_covishield if date_month == 3 & (lgd_state_name == "punjab" | lgd_state_name == "Haryana")
+```
+
+Always good to sketch out a venn diagram to ensure you understand what conditional statement you need to use!
+
+## ``<=, <, >, >=, !=``
+
+So far, we have dealt with the equality condition ``==``. The expression for "less than or equal to" is ``<=``, "strictly less than" is ``<``, "strictly more than" is ``>``, and "more than or equal to" is ``>=``. ``!=`` stands for "not equal to".
+
+One short example: Instead of looking at the whole month of March, lets take a look at average daily covishield vaccinations at district level (all India sample) for:
+
+1. the first 15 days of March 
+
+```
+summarize total_covishield if date_month == 3 & date_day <= 15
+```
+
+2. between 16 and 25 March 
+
+```
+summarize total_covishield if date_month == 3 & (date_day >= 16 & date_day <= 25)
+summarize total_covishield if date_month == 3 & inrange(date_day, 16, 25)
+```
+
+3. 26 through the end of March
+
+```
+summarize total_covishield if date_month == 3 & (date_day >= 26 & date_day <= 31)
+summarize total_covishield if date_month == 3 & inrange(date_day, 26, 31)
+summarize total_covishield if date_month == 3 & date_day >= 26
+summarize total_covishield if date_month == 3 & date_day >= 26 & !missing(date_day)
+```
+
+Lots of heavy stuff happening in #2 and #3 above. Lets unpack:
+
+- 
