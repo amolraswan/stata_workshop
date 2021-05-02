@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Stata Commands - use
+title: use
 nav_order: 1
 parent: Stata Commands
 grand_parent: Session 1
 has_children: false
-has_toc: true
 ---
 
 ## ``use``
