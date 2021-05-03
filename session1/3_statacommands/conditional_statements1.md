@@ -24,7 +24,7 @@ Anyway, lets get back to what we ran. The additional piece is ``if date_month ==
 ## And/Or
 
 What if you want to now look at the average daily vaccinations in Punjab's districts in March? That is, instead of all Indian districts, we want to restrict the sample to Punjab districts. So, we now have two statements we want to subset on: ``date_month == 3`` and ``lgd_state_name == "punjab"``.
-Sorry my markdown (tool in which this webpage is written) skills are still not great enough, so you will need two sets: set of all observations with ``date_month == 3`` and another set of observations with ``lgd_state_name == "punjab"``. Do we want an intersection or a union of these sets? 
+Sorry my markdown (tool in which this webpage is written) skills are still not great enough, so you will need to imagine a venn diagram with two sets: set of all observations with ``date_month == 3`` and another set of observations with ``lgd_state_name == "punjab"``. Do we want an intersection or a union of these sets? 
 
 An intersection! We want to look at the data pertaining to Punjab districts in March. An intersection means "and", i.e., both the conditions should be satisfied. Stata does not understand the english word "and", instead we need to use "&". So, how will our if statement look? ``if date_month == 3 & lgd_state_name == "punjab"``. So, we run:
 
