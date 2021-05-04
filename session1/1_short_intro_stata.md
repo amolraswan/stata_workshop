@@ -20,3 +20,5 @@ Though R is much more flexible and versatile (and is free!) than Stata, it is al
 Stata recently released Stata 17. The number at the end signifies the version. You *never*need the latest version. Anything from Stata 13 and above is good enough. 
 
 A short, slightly fast [introduction](https://www.youtube.com/watch?v=2Lde75owQlU) to Stata's user interface. 
+
+[This](https://www.youtube.com/watch?v=6IzNTAaRNx0) is an excellent overview of working with do-files in Stata. Watch it because we do not have a separate page on working with do-files.
