@@ -25,4 +25,4 @@ Submit your answers in a do-file. At the top of the do-file, mention your name, 
 
 	1. More covaxin shots than covishield shots?
 	2. More males getting vaccinated than females?
-	3. More males getting covaxin shots than females getting covishield shots? 
+	3. More males getting covaxin shots than females getting covishield shots?  -> Oops sorry, this question cannot be answered because we don't have disaggregated data for each vaccine by sex
