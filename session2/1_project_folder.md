@@ -29,4 +29,4 @@ These are simply suggestions. For example, instead of having raw and final data 
 - 04_tables
 - 05_graphs
 
-There are numerous possible customizations here. For now, we will stick to the original version. For clarity, I have uploaded an empty sample directory [here](https://drive.google.com/file/d/1CCe124cdJ70KaEI5NTlr-9x7EzqK63Pf/view?usp=sharing). We will use its folder structure for illustration purpose today.
+There are numerous possible customizations here. For now, we will stick to the first structure above. For clarity, I have uploaded an empty sample directory [here](https://drive.google.com/file/d/1CCe124cdJ70KaEI5NTlr-9x7EzqK63Pf/view?usp=sharing). We will use its folder structure for illustration purpose today.
