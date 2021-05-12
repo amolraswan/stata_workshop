@@ -10,13 +10,7 @@ Use the folder structure from [here](https://amolraswan.github.io/stata_workshop
 
 We continue with the vaccination data available [here](https://drive.google.com/file/d/1Sb86BVYAgiyqpg7QsBdNvfWfG9Y63UGy/view?usp=sharing). Remember to save it in the ``01_raw_data`` folder!
 
-1. Calculate the sum of first 50 whole numbers (0 to 49) using a ``forvalues`` loop. **Hint**: we can add to the value of an existing local macro. For example, below, we declare a local x that equals 5 and then increment x's value by 7. (Note that the ``=`` sign is superfluous in both the first and second steps)
-
-```
-local x = 5
-local x = `x' + 7
-di `x' 
-```
+1. Calculate the sum of first 50 whole numbers (0 to 49) using a ``forvalues`` loop. **Hint**: we can add to the value of an existing local macro. For example, we can declare a local x that equals 5: ``local x = 5``. And then increment x's value by 7: ``local x = `x' + 7``. (Note that the ``=`` sign is superfluous in both the first and second steps)
 
 2. We learnt the flexibility offered by the ``rename`` command in [session 1](https://amolraswan.github.io/stata_workshop/session1/3_statacommands/rename/). In the second to last example on that page, we learnt how to remove the suffix ``date_`` from the variables that have it. There were 3 such variables: ``date_day``, ``date_month``, and ``date_year``. Let us try doing this using a ``foreach`` loop now. Follow these steps:
 
@@ -36,6 +30,6 @@ di `x'
 
 	2. Write another ``forvalues`` loop that goes through the day-wise locals you defined in step 1 and then displays the mean value on each day in a "nice" way. Make it "nice" by writing a descriptive ``display`` command, so something like: ``display "Mean covishield vaccinations on `y' March were: ..."``. You need to fill in the ``...`` with the suitable local name. Note that here, I am using ``y`` in the ``forvalues`` statement.
 
-Both ``forvalues`` statements should go from 1 to 31 since you want to loop over the days in March.
+	3. Note: Both ``forvalues`` statements should go from 1 to 31 since you want to loop over the days in March.
 
 5. Save the edited dataset in the ``02_processed_data`` folder. (add "\_edited" at the end of its name)
