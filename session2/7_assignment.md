@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Short assignment
-nav_order: 4
+nav_order: 7
 parent: Session 2
 has_children: false
 ---
