@@ -50,3 +50,4 @@ forvalues y = 1/31 {
 	di "Mean covishield vacc on `y' March were: `mean_on_`y'_march' "
 }
 ```
+
