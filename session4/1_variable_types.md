@@ -27,3 +27,8 @@ On the other hand, we can convert a variable's type from numeric to string using
 tostring date, replace
 ```
 
+How to know if a variable is string or numeric? A few ways: 
+
+- The ``codebook`` outputs the variable type in its results. 
+- If you select a variable in the "Variables" window, then the "Properties" window tells you its type as well.
+- When browsing the data, string variable observations are displayed in red while numeric variable observations are displayed in black. You might notice some variables with observations in blue; these are numeric variables but have a "value label"; we cover this next.
