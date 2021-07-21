@@ -17,5 +17,3 @@ Another Stata tutorial I would whole-heartedly recommend is [IPA's Stata Trainin
 In the end, you will not learn Stata through tutorials (AHA!). Yes, learning basic commands is helpful but you need to get into the weeds by starting a Stata project. This is the reason behind the short assignments in sessions 1-3 and (upcoming) projects in sessions 4-5. 
 
 What I say in this tutorial may also often be incorrect. Please email at amolraswan@gmail.com with any errors or your suggestions. Thank you :)
-
-BTW, this guide's design comes from the template used by [IPA-GPRL Guides github page](https://povertyaction.github.io/guides/).
